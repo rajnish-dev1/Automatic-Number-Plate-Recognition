@@ -1,0 +1,18 @@
+detection:
+  mode: opencv
+  weights: models/license_plate_detector.pt
+  confidence: 0.25
+  image_size: 640
+
+ocr:
+  languages:
+    - en
+  gpu: false
+
+output:
+  directory: output
+  csv_file: detections.csv
+
+processing:
+  frame_skip: 1
+  show: false
