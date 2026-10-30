@@ -74,3 +74,72 @@ GitHub: https://github.com/rajnish-dev1
 ## 📄 License
 
 MIT License
+---
+
+## 🏗️ System Architecture
+
+The ANPR system follows a modular
+computer vision architecture.
+
+```mermaid
+flowchart TD
+    A[Input Image / Video]
+    B[Frame Extraction]
+    C[Image Preprocessing]
+    D{Detection Mode}
+    E[OpenCV Detector]
+    F[YOLO Detector]
+    G[Plate Localization]
+    H[Plate Cropping]
+    I[Image Enhancement]
+    J[EasyOCR]
+    K[Text Processing]
+    L[Recognized Number]
+    M[Annotated Output]
+    N[CSV Storage]
+
+    A --> B --> C --> D
+    D --> E --> G
+    D --> F --> G
+    G --> H --> I --> J --> K --> L
+    L --> M
+    L --> N
+```
+
+## 🔄 Processing Pipeline
+
+```mermaid
+flowchart TD
+    A[Vehicle Input]
+    B[Preprocessing]
+    C[Number Plate Detection]
+    D[Plate Extraction]
+    E[OCR Recognition]
+    F[Text Cleaning]
+    G[Final Number]
+    H[Save Results]
+
+    A --> B --> C --> D
+    D --> E --> F --> G --> H
+```
+
+## 📂 Project Structure
+
+See the complete project structure
+in the repository folders.
+
+## 📚 Documentation
+
+- [System Architecture](assets/architecture.md)
+- [Processing Pipeline](assets/pipeline.md)
+- [Dataset Guide](dataset/README.md)
+- [YOLO Model Guide](models/README.md)
+- [Contribution Guidelines](CONTRIBUTING.md)
+
+## 👨‍💻 Author
+
+**Rajnish Kumar**
+
+B.E. Information Technology
+
+[GitHub Profile](https://github.com/rajnish-dev1)
